@@ -7,11 +7,11 @@ const GOERLI_PRIVATE_KEY = process.env.GOERLI_PRIVATE_KEY
 const INFURA_API_KEY = process.env.INFURA_API_KEY
 const MOONRIVER_PRIVATE_KEY = process.env.MOONRIVER_PRIVATE_KEY
 
-const GOERLI_INFURA_URL = `https://goerli.infura.io/v3/${INFURA_API_KEY}`
-const ROPSTEN_INFURA_URL = `https://ropsten.infura.io/v3/${INFURA_API_KEY}`
-const KVOAN_ALCHEMY_URL = `https://eth-kovan.alchemyapi.io/v2/${ALCHEMY_API_KEY}`
-const RINKBEY_ALCHEMY_URL = "https://eth-rinkeby.alchemyapi.io/v2/${ALCHEMY_API_KEY}"
-const MOONRIVER_URL = "https://rpc.moonriver.moonbeam.network/"
+const GOERLI_INFURA_URL = process.env.GOERLI_INFURA_URL || `https://goerli.infura.io/v3/${INFURA_API_KEY}`
+const ROPSTEN_INFURA_URL = process.env.ROPSTEN_INFURA_URL || `https://ropsten.infura.io/v3/${INFURA_API_KEY}`
+const KVOAN_ALCHEMY_URL = process.env.KVOAN_ALCHEMY_URL || `https://eth-kovan.alchemyapi.io/v2/${ALCHEMY_API_KEY}`
+const RINKBEY_ALCHEMY_URL = process.env.RINKBEY_ALCHEMY_URL || `https://eth-rinkeby.alchemyapi.io/v2/${ALCHEMY_API_KEY}`
+const MOONRIVER_URL = process.env.MOONRIVER_URL || `https://rpc.moonriver.moonbeam.network/`
 
 /**
  * @type import('hardhat/config').HardhatUserConfig
