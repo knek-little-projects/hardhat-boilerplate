@@ -25,24 +25,32 @@ module.exports = {
     ]
   },
   defaultNetwork: "hardhat",
-  networks: {
-    goerli: {
-      url: GOERLI_INFURA_URL,
-      accounts: [
-        GOERLI_PRIVATE_KEY
-      ]
-    },
-    ropsten: {
-      url: ROPSTEN_INFURA_URL,
-      accounts: [
-        ROPSTEN_PRIVATE_KEY
-      ]
-    },
-    moonriver: {
-      url: MOONRIVER_URL,
-      accounts: [
-        MOONRIVER_PRIVATE_KEY
-      ]
-    },
+  networks: {}
+}
+
+if (GOERLI_PRIVATE_KEY) {
+  module.exports.networks.goerli = {
+    url: GOERLI_INFURA_URL,
+    accounts: [
+      GOERLI_PRIVATE_KEY
+    ]
   }
-};
+}
+
+if (ROPSTEN_PRIVATE_KEY) {
+  module.exports.networks.ropsten = {
+    url: ROPSTEN_INFURA_URL,
+    accounts: [
+      ROPSTEN_PRIVATE_KEY
+    ]
+  }
+}
+
+if (ROPSTEN_PRIVATE_KEY) {
+  module.exports.networks.moonriver = {
+    url: MOONRIVER_URL,
+    accounts: [
+      MOONRIVER_PRIVATE_KEY
+    ]
+  }
+}
