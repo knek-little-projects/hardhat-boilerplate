@@ -4,6 +4,7 @@ require('dotenv').config()
 const DEFAULT_COMPILER = process.env.DEFAULT_COMPILER || "0.8.7"
 const ALCHEMY_API_KEY = process.env.ALCHEMY_API_KEY
 const ROPSTEN_PRIVATE_KEY = process.env.ROPSTEN_PRIVATE_KEY
+const RINKBEY_PRIVATE_KEY = process.env.RINKBEY_PRIVATE_KEY
 const GOERLI_PRIVATE_KEY = process.env.GOERLI_PRIVATE_KEY
 const INFURA_API_KEY = process.env.INFURA_API_KEY
 const MOONRIVER_PRIVATE_KEY = process.env.MOONRIVER_PRIVATE_KEY
@@ -22,7 +23,7 @@ module.exports = {
     compilers: [
       {
         version: DEFAULT_COMPILER
-      }
+      },
     ]
   },
   defaultNetwork: "hardhat",
@@ -52,6 +53,15 @@ if (MOONRIVER_PRIVATE_KEY) {
     url: MOONRIVER_URL,
     accounts: [
       MOONRIVER_PRIVATE_KEY
+    ]
+  }
+}
+
+if (RINKBEY_PRIVATE_KEY) {
+  module.exports.networks.rinkbey = {
+    url: RINKBEY_URL,
+    accounts: [
+      RINKBEY_PRIVATE_KEY
     ]
   }
 }
