@@ -1,5 +1,6 @@
 require("@nomiclabs/hardhat-waffle");
 require('dotenv').config()
+require("@nomiclabs/hardhat-web3");
 
 const DEFAULT_COMPILER = process.env.DEFAULT_COMPILER || "0.8.7"
 const ALCHEMY_API_KEY = process.env.ALCHEMY_API_KEY
