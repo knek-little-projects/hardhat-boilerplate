@@ -8,3 +8,8 @@ typechain-types
 #Hardhat files
 cache
 artifacts
+
+private
+test/private
+scripts/private
+utils/private
